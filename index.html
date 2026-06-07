@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arkacore — Global Talent Acquisition & Outsourcing Solutions</title>
+  <meta name="description" content="Arkacore delivers enterprise-grade global talent acquisition, outsourcing, and workforce scaling solutions across US, EMEA, APAC, and LATAM regions." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- SheetDB / Google Sheets integration via Apps Script -->
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">Arkacore</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- Floating particles -->
+<div class="particles" id="particles"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress"><span></span></div>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-logo">Arka<span>core</span></a>
+  <div class="nav-center" id="navCenter">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#global-network">Global Network</a></li>
+      <li><a href="#for-candidates">For Candidates</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <button class="nav-cta" id="partnerBtn">Partner With Us</button>
+    <button class="hamburger" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-video-wrap">
+    <video autoplay muted loop playsinline id="heroVideo">
+      <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-grid-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge anim-fade-up">
+      <span class="dot"></span>
+      Now operating in 30+ countries
+    </div>
+    <h1 class="anim-fade-up ad2">
+      Build World-Class Teams.<br />
+      <span class="gradient-text" id="heroTyping"></span><span class="typing-cursor">|</span>
+    </h1>
+    <p class="hero-sub anim-fade-up ad3">
+      Enterprise talent acquisition and outsourcing solutions that scale with your ambition — from New York to New Delhi.
+    </p>
+    <div class="hero-paths anim-fade-up ad4">
+      <a href="#for-clients" class="path-card" id="pathEmployer">
+        <div class="path-icon">🏢</div>
+        <h3>I Need to Hire Global Talent</h3>
+        <p>For enterprise clients scaling teams across borders</p>
+        <span class="card-arrow">→</span>
+      </a>
+      <a href="#for-candidates" class="path-card" id="pathCandidate">
+        <div class="path-icon">🚀</div>
+        <h3>I Am Looking for a Role</h3>
+        <p>Discover opportunities at world-leading companies</p>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+    <div class="hero-clients anim-fade-up ad5">
+      <span>Trusted by teams at</span>
+      <div class="client-logos">
+        <span class="client-logo">Google</span>
+        <span class="client-logo">Microsoft</span>
+        <span class="client-logo">Amazon</span>
+        <span class="client-logo">Meta</span>
+        <span class="client-logo">Stripe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLUTIONS ===== -->
+<section id="solutions">
+  <div class="section-header">
+    <span class="section-label reveal">What We Do</span>
+    <h2 class="reveal delay">End-to-End Talent Solutions</h2>
+    <p class="reveal delay2">From sourcing to onboarding, we handle the complexity of global hiring so you can focus on building.</p>
+  </div>
+  <div class="solutions-grid">
+    <div class="solution-card reveal" data-tilt>
+      <div class="card-icon">⚡</div>
+      <h3>Talent Sourcing</h3>
+      <p>AI-driven candidate sourcing from 50M+ global profiles with precision matching algorithms.</p>
+    </div>
+    <div class="solution-card reveal delay" data-tilt>
+      <div class="card-icon">🎯</div>
+      <h3>Executive Search</h3>
+      <p>C-suite and VP-level placement with deep industry vertical expertise and confidential outreach.</p>
+    </div>
+    <div class="solution-card reveal delay2" data-tilt>
+      <div class="card-icon">🔄</div>
+      <h3>RPO Solutions</h3>
+      <p>Recruitment Process Outsourcing that integrates with your ATS and hiring workflows seamlessly.</p>
+    </div>
+    <div class="solution-card reveal delay" data-tilt>
+      <div class="card-icon">🌐</div>
+      <h3>EOR & Compliance</h3>
+      <p>Employer of Record services handling payroll, benefits, and local employment law compliance.</p>
+    </div>
+    <div class="solution-card reveal delay2" data-tilt>
+      <div class="card-icon">📊</div>
+      <h3>Workforce Analytics</h3>
+      <p>Real-time dashboards tracking hiring velocity, cost-per-hire, and talent pipeline health metrics.</p>
+    </div>
+    <div class="solution-card reveal delay3" data-tilt>
+      <div class="card-icon">🛡️</div>
+      <h3>Managed Teams</h3>
+      <p>Fully managed offshore development centers with dedicated project managers and quality assurance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GLOBAL NETWORK ===== -->
+<section id="global-network">
+  <div class="section-header">
+    <span class="section-label reveal">Global Reach</span>
+    <h2 class="reveal delay">Cross-Border Capabilities</h2>
+    <p class="reveal delay2">Operating across every major economic region with local expertise and global standards.</p>
+  </div>
+  <div class="region-tabs reveal" id="regionTabs">
+    <button class="region-tab active" data-region="us">United States</button>
+    <button class="region-tab" data-region="emea">EMEA</button>
+    <button class="region-tab" data-region="apac">APAC</button>
+    <button class="region-tab" data-region="latam">LATAM</button>
+  </div>
+  <div class="region-content reveal delay">
+    <div class="region-panel active" data-region="us">
+      <h3>United States Operations</h3>
+      <p>Our US headquarters anchors the largest talent acquisition operation, servicing Fortune 500 enterprises across tech hubs from Silicon Valley to NYC's Financial District.</p>
+      <div class="region-stats">
+        <div class="region-stat"><div class="num counter-region" data-target="2400">0</div><div class="label">Placements / Year</div></div>
+        <div class="region-stat"><div class="num">18</div><div class="label">Metro Areas</div></div>
+        <div class="region-stat"><div class="num">96%</div><div class="label">Retention Rate</div></div>
+      </div>
+    </div>
+    <div class="region-panel" data-region="emea">
+      <h3>Europe, Middle East & Africa</h3>
+      <p>Offices in London, Berlin, and Dubai enable GDPR-compliant hiring across the EU, UK, and emerging African tech ecosystems.</p>
+      <div class="region-stats">
+        <div class="region-stat"><div class="num">1,100+</div><div class="label">Placements / Year</div></div>
+        <div class="region-stat"><div class="num">24</div><div class="label">Countries</div></div>
+        <div class="region-stat"><div class="num">14</div><div class="label">Languages</div></div>
+      </div>
+    </div>
+    <div class="region-panel" data-region="apac">
+      <h3>Asia-Pacific Region</h3>
+      <p>India, Singapore, and Australia hubs power engineering talent pipelines with time-zone-aligned delivery.</p>
+      <div class="region-stats">
+        <div class="region-stat"><div class="num">3,200+</div><div class="label">Placements / Year</div></div>
+        <div class="region-stat"><div class="num">12</div><div class="label">Countries</div></div>
+        <div class="region-stat"><div class="num">40%</div><div class="label">Cost Savings</div></div>
+      </div>
+    </div>
+    <div class="region-panel" data-region="latam">
+      <h3>Latin America</h3>
+      <p>Nearshore excellence from Mexico City, São Paulo, and Buenos Aires — US-aligned time zones and bilingual talent.</p>
+      <div class="region-stats">
+        <div class="region-stat"><div class="num">800+</div><div class="label">Placements / Year</div></div>
+        <div class="region-stat"><div class="num">8</div><div class="label">Countries</div></div>
+        <div class="region-stat"><div class="num">3hr</div><div class="label">Avg. TZ Overlap</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TALENT CALCULATOR ===== -->
+<section id="for-clients">
+  <div class="section-header">
+    <span class="section-label reveal">For Enterprises</span>
+    <h2 class="reveal delay">Talent Scale Calculator</h2>
+    <p class="reveal delay2">Configure your ideal engagement model in three simple steps.</p>
+  </div>
+  <div class="calc-container reveal delay3">
+    <div class="step-indicator">
+      <div class="step-dot active" data-step="1"></div>
+      <div class="step-dot" data-step="2"></div>
+      <div class="step-dot" data-step="3"></div>
+      <div class="step-dot" data-step="4"></div>
+    </div>
+    <div class="calc-step active" data-step="1">
+      <h3>Select Your Target Region</h3>
+      <p>Where do you need talent deployed?</p>
+      <div class="option-grid" data-field="region">
+        <button class="option-btn" data-value="us"><span class="opt-title">🇺🇸 United States</span><span class="opt-desc">Onshore, full compliance</span></button>
+        <button class="option-btn" data-value="emea"><span class="opt-title">🇪🇺 EMEA</span><span class="opt-desc">EU/UK, GDPR ready</span></button>
+        <button class="option-btn" data-value="apac"><span class="opt-title">🌏 APAC</span><span class="opt-desc">India, SEA, Australia</span></button>
+        <button class="option-btn" data-value="latam"><span class="opt-title">🌎 LATAM</span><span class="opt-desc">Nearshore, US-aligned TZ</span></button>
+      </div>
+    </div>
+    <div class="calc-step" data-step="2">
+      <h3>Required Talent Stack</h3>
+      <p>Select all roles you need to fill.</p>
+      <div class="option-grid" data-field="roles" data-multi="true">
+        <button class="option-btn" data-value="engineers"><span class="opt-title">💻 Software Engineers</span><span class="opt-desc">Full-stack, backend, frontend</span></button>
+        <button class="option-btn" data-value="marketers"><span class="opt-title">📢 Digital Marketers</span><span class="opt-desc">SEO, paid, content</span></button>
+        <button class="option-btn" data-value="cs"><span class="opt-title">🤝 Customer Success</span><span class="opt-desc">Support, onboarding</span></button>
+        <button class="option-btn" data-value="data"><span class="opt-title">📊 Data & Analytics</span><span class="opt-desc">ML, BI, data eng</span></button>
+        <button class="option-btn" data-value="design"><span class="opt-title">🎨 Product Design</span><span class="opt-desc">UX/UI, research</span></button>
+        <button class="option-btn" data-value="ops"><span class="opt-title">⚙️ Operations</span><span class="opt-desc">HR, finance, admin</span></button>
+      </div>
+    </div>
+    <div class="calc-step" data-step="3">
+      <h3>Team Scale</h3>
+      <p>How many professionals do you need?</p>
+      <div class="option-grid" data-field="scale">
+        <button class="option-btn" data-value="1-5"><span class="opt-title">1 — 5</span><span class="opt-desc">Pilot team</span></button>
+        <button class="option-btn" data-value="6-20"><span class="opt-title">6 — 20</span><span class="opt-desc">Growth squad</span></button>
+        <button class="option-btn" data-value="21-50"><span class="opt-title">21 — 50</span><span class="opt-desc">Dedicated center</span></button>
+        <button class="option-btn" data-value="50+"><span class="opt-title">50+</span><span class="opt-desc">Enterprise program</span></button>
+      </div>
+    </div>
+    <div class="calc-step" data-step="4">
+      <div class="calc-result" id="calcResult"></div>
+    </div>
+    <div class="calc-nav">
+      <button class="calc-btn secondary" id="calcBack" disabled>← Back</button>
+      <button class="calc-btn primary" id="calcNext">Next →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOB BOARD ===== -->
+<section id="for-candidates">
+  <div class="section-header">
+    <span class="section-label reveal">For Candidates</span>
+    <h2 class="reveal delay">Open Positions</h2>
+    <p class="reveal delay2">Find your next role at world-leading companies through our global network.</p>
+  </div>
+  <div class="job-board reveal delay3">
+    <div class="job-search-wrap">
+      <input type="text" class="job-search" id="jobSearch" placeholder="Search roles, skills, or locations..." />
+    </div>
+    <div class="job-filters" id="jobFilters">
+      <button class="filter-tag active" data-filter="all">All Roles</button>
+      <button class="filter-tag" data-filter="engineering">Engineering</button>
+      <button class="filter-tag" data-filter="marketing">Marketing</button>
+      <button class="filter-tag" data-filter="design">Design</button>
+      <button class="filter-tag" data-filter="operations">Operations</button>
+      <button class="filter-tag" data-filter="data">Data</button>
+    </div>
+    <div class="job-list" id="jobList"></div>
+    <p class="no-results" id="noResults">No positions match your search.</p>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-band" id="about">
+  <div class="section-header">
+    <span class="section-label reveal">About Arkacore</span>
+    <h2 class="reveal delay">Built for Scale. Designed for Trust.</h2>
+  </div>
+  <div class="stats-container">
+    <div class="stat-item reveal"><h2 class="counter" data-target="7500">0</h2><p>Placements</p></div>
+    <div class="stat-item reveal delay"><h2 class="counter" data-target="30">0</h2><p>Countries</p></div>
+    <div class="stat-item reveal delay2"><h2 class="counter" data-target="96">0</h2><p>% Retention</p></div>
+    <div class="stat-item reveal delay3"><h2 class="counter" data-target="200">0</h2><p>Enterprise Clients</p></div>
+  </div>
+</section>
+
+<!-- ===== CONTACT US ===== -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-label reveal">Get In Touch</span>
+    <h2 class="reveal delay">Let's Build Something Great</h2>
+    <p class="reveal delay2">Fill in your details and our team will reach out within 24 hours.</p>
+  </div>
+  <div class="contact-container reveal delay3">
+    <div class="contact-info-side">
+      <div class="contact-info-card">
+        <div class="ci-icon">📧</div>
+        <h4>Email Us</h4>
+        <p>partnerships@arkacore.pro</p>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon">📞</div>
+        <h4>Call Us</h4>
+        <p>+1 (555) 019-2831</p>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon">📍</div>
+        <h4>Visit Us</h4>
+        <p>790 New York Ave, Suite 400, NY</p>
+      </div>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cfName">Full Name *</label>
+          <input type="text" id="cfName" name="name" required placeholder="John Doe" />
+        </div>
+        <div class="form-group">
+          <label for="cfEmail">Email Address *</label>
+          <input type="email" id="cfEmail" name="email" required placeholder="john@company.com" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cfCompany">Company</label>
+          <input type="text" id="cfCompany" name="company" placeholder="Acme Inc." />
+        </div>
+        <div class="form-group">
+          <label for="cfPhone">Phone Number</label>
+          <input type="tel" id="cfPhone" name="phone" placeholder="+1 (555) 000-0000" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cfService">Service Interested In</label>
+        <select id="cfService" name="service">
+          <option value="">Select a service...</option>
+          <option value="Talent Sourcing">Talent Sourcing</option>
+          <option value="Executive Search">Executive Search</option>
+          <option value="RPO Solutions">RPO Solutions</option>
+          <option value="Managed Teams">Managed Teams</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="cfMessage">Message *</label>
+        <textarea id="cfMessage" name="message" required rows="4" placeholder="Tell us about your hiring needs..."></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="formSubmitBtn">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-loader"></span>
+      </button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </div>
+</section>
+
+<!-- 
+======================================================
+DEVELOPER NOTE: OWNER CONTACT ASSETS CONFIGURATION
+Replace the template strings below with your real data.
+======================================================
+-->
+<footer class="arkacore-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Arka<span>core</span></h3>
+      <p>Global Talent. Simplified Operations. We connect enterprises with exceptional talent across borders.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Solutions</h4>
+      <ul>
+        <li><a href="#solutions">Talent Sourcing</a></li>
+        <li><a href="#solutions">Executive Search</a></li>
+        <li><a href="#solutions">RPO Solutions</a></li>
+        <li><a href="#solutions">Managed Teams</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#global-network">Global Network</a></li>
+        <li><a href="#for-candidates">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Global HQ Contact</h4>
+      <!-- OWNER ASSET: Contact Phone Number -->
+      <p class="phone-number">📞 +1 (555) 019-2831 <!-- COMMENT: Replace with your owner contact number --></p>
+      <!-- OWNER ASSET: Contact Email Address -->
+      <p class="email-address">✉️ partnerships@arkacore.pro <!-- COMMENT: Replace with your owner corporate email --></p>
+      <!-- OWNER ASSET: Corporate Address -->
+      <p class="address">📍 790 New York Ave, Suite 400, New York, NY <!-- COMMENT: Replace with your actual physical address --></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Arkacore Technologies. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="#" aria-label="LinkedIn">in</a>
+      <a href="#" aria-label="Twitter">𝕏</a>
+      <a href="#" aria-label="GitHub">GH</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
